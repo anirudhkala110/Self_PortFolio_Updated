@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(cors({
-    origin: ["http://localhost:3016"],
+    origin: ["https://self-portfolio-green.vercel.app","http://localhost:3016"],
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true,
 }));
