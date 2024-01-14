@@ -1,0 +1,44 @@
+.services {
+    background-color: black;
+    color: white;
+    height: 100vh;
+}
+
+.services img {
+    width: 50px;
+}
+
+.service {
+    height: 305px;
+}
+
+hr {
+    height: 5px;
+    background-image: -webkit-linear-gradient(left, black, white, white, black);
+}
+
+.myservicesText {
+    text-align: center;
+}
+
+.myservicesText span {
+    color: rgb(211, 23, 111) !important
+}
+
+.serviceIcon span {
+    color: rgb(211, 23, 111) !important
+}
+
+.serviceIcon {
+    color: rgb(211, 23, 111) !important
+}
+
+.card-body a {
+    color: white;
+    background-color: rgb(211, 21, 111);
+}
+
+.card-body a:hover {
+    background-color: transparent;
+    border: 1px solid rgb(211, 23, 111);
+}

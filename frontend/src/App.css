@@ -1,0 +1,11 @@
+.footer{
+    /* position: absolute; */
+    width: 100%;
+    top: 100%;
+}
+
+@media only screen and (max-width:1000px) {
+    .hide-footer{
+        display: none;
+    }
+}

@@ -1,0 +1,25 @@
+.home {
+    background-image: url('../Portfolio/Images/background.gif');
+    /* background: black !important; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.homeTextPart {
+    display: flex;
+    align-items: center;
+}
+
+.homeTextPart h3 {
+    color: rgb(225, 10, 178);
+}
+
+.homeTextPart {
+    /* padding-top: 72px; */
+}
+
+
+.icons {
+    font-size: 18px;
+}

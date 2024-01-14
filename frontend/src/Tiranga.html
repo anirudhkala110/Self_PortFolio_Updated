@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tiranga</title>
+        <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .upper {
+            width: 100vw;
+            height: 30vw;
+            background-color: orange;
+            border: 1px solid;
+            max-width: 600px;
+            max-height: 100px !important;
+        }
+        
+        .middle {
+            border: 1px solid;
+            max-width: 600px;
+            width: 100vw;
+            height: 30vw;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-height: 100px !important;
+        }
+
+        .lower {
+            border: 1px solid;
+            max-width: 600px;
+            width: 100vw;
+            height: 30vw;
+            background-color: green;
+            max-height: 100px !important;
+            box-shadow: 0px 1px 20px 1px rgba(0, 0, 0, 0.266);
+        }
+
+        .center {
+            width: 25vw;
+            height: 25vw;
+            max-height: 90px;
+            max-width: 90px;
+            border-radius: 50%;
+            border: 1px solid blue;
+            background-color: #ffffff; /* Set the color of the center */
+            position: relative;
+    border: 2px solid darkblue;
+    position: relative;
+    margin: 0 auto;   
+    box-shadow: 0px 0px 10px 1px rgba(2, 2, 2, 0.264);
+}
+
+.center .line {
+    height: 100%;
+    width: 1px;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    background: darkblue;
+    filter: drop-shadow(0px 0px 1px rgb(0, 0, 255));
+}
+ 
+.line:nth-child(1) {
+    transform: rotate(15deg)
+}
+ 
+.line:nth-child(2) {
+    transform: rotate(30deg)
+}
+ 
+.line:nth-child(3) {
+    transform: rotate(45deg)
+}
+ 
+.line:nth-child(4) {
+    transform: rotate(60deg)
+}
+ 
+.line:nth-child(5) {
+    transform: rotate(75deg)
+}
+ 
+.line:nth-child(6) {
+    transform: rotate(90deg)
+}
+ 
+.line:nth-child(7) {
+    transform: rotate(105deg)
+}
+ 
+.line:nth-child(8) {
+    transform: rotate(120deg)
+}
+ 
+.line:nth-child(9) {
+    transform: rotate(135deg)
+}
+ 
+.line:nth-child(10) {
+    transform: rotate(150deg)
+}
+ 
+.line:nth-child(11) {
+    transform: rotate(165deg)
+}
+ 
+.line:nth-child(12) {
+    transform: rotate(180deg)
+}
+.stick{
+width: 25px;
+position: absolute;
+background: linear-gradient(90deg,rgb(0, 0, 0),rgb(254, 254, 254),rgba(0, 0, 0, 0.977));
+min-height: 650px;
+border: 1px solid;
+z-index: 50;
+}
+.base{
+    display: flex;
+    justify-content: flex-start;
+}
+@keyframes identifier {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.end{
+    position: relative;
+    z-index: 100;
+    height: 100vh;
+    width: 250px;
+    background-color: rgb(255, 255, 255);
+}
+.wave {
+    position: absolute;
+    transform-origin: 0% 0% 0px;
+    width: 2px;
+    height: 355px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.012), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.012));
+    border-radius: 10px;
+    box-shadow: 0px -10px 100px 1px rgba(0, 0, 0, 0.397);
+    animation: animate 1s infinite linear;
+    z-index: 10;
+    opacity: 1;
+}
+
+/* @keyframes animate {
+    0% {
+        transform: translateX(-100px) rotate(-30deg);
+    }
+    100% {
+        transform: translateX(600px) rotate(30deg) scale(2);
+    }
+     100% {
+        transform: translateX(-100px) rotate(-30deg);
+    } 
+} */
+.bottom{
+    width: 150px;
+    position: absolute;
+    border: 1px solid;
+    top: 650px;
+    height: 40px;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 5px;
+    background: linear-gradient(90deg,rgba(0, 0, 0, 0.741),white,rgba(0, 0, 0, 0.242));
+    box-shadow: inset 30px 20px 10px;
+}
+
+    </style>
+    </head>
+    <body>
+        <div class="base">
+            <div>
+                <div class="stick"></div>
+                <div class="bottom">
+
+                </div>
+            </div>
+            <div class="wave"></div>
+        <div class="flag">
+            <div class="upper"></div>
+        <div class="middle">
+            <div class="center">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="lower"></div>
+        </div>
+        
+        <div class="end"></div>
+        </div>
+    </body>
+</html>

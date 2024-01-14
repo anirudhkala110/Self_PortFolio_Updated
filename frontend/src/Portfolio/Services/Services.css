@@ -1,0 +1,148 @@
+.services {
+    background-color: black;
+    color: white;
+}
+
+.services img {
+    width: 50px;
+}
+
+.service {
+    /* height: 310px; */
+    transition: .6s;
+}
+
+.service:hover {
+    background-color: rgb(211, 23, 111);
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.service:hover .serviceIcon {
+    color: white;
+}
+
+.service:hover .serviceIcon span {
+    background-color: white;
+}
+
+hr {
+    height: 5px;
+    background-image: -webkit-linear-gradient(left, black, white, white, black);
+}
+
+.myservicesText {
+    text-align: center;
+}
+
+.myservicesText span {
+    color: rgb(211, 23, 111) !important
+}
+
+.serviceIcon span {
+    color: rgb(211, 23, 111) !important
+}
+
+.serviceIcon {
+    color: rgb(211, 23, 111) !important
+}
+
+.mg1 {
+    animation: example1;
+    animation-duration: 4s;
+    transition: 2s ease-in-out;
+    filter: invert(1);
+    /* Corrected value */
+}
+
+.mg2 {
+    transition: 2s ease-in-out;
+    filter: invert(1);
+    /* Corrected value */
+}
+
+.mg3 {
+    animation: example2;
+    animation-duration: .2s;
+    transition: .2s ease-in-out;
+    filter: invert(1);
+    /* Corrected value */
+}
+
+.img1:hover {
+    height: 50px;
+    transform: scale(1.02);
+    cursor: pointer;
+    animation: example1;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+}
+
+.img2:hover {
+    width: 50px;
+    cursor: pointer;
+    transform: scale(1.2) rotateY(0deg);
+    animation: rotateAnimation 1s infinite;
+    /* Apply the animation */
+}
+
+@keyframes rotateAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+        /* Rotate 360 degrees along Y-axis */
+    }
+}
+
+.img3:hover {
+    width: 50px;
+    cursor: pointer;
+    animation: example3;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    transform: scale(1.2)
+}
+
+@keyframes example1 {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes example3 {
+
+    /* 0%{rotate:10deg;}
+
+    50%{rotate:180deg;}
+
+    100%{rotate:360deg;} */
+    from {
+        rotate: 0deg
+    }
+
+    to {
+        rotate: 360deg
+    }
+}
+
+
+.overflow-manage {}
+
+.overflow-manage::-webkit-scrollbar {
+    width: 0px;
+}

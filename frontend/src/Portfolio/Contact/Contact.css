@@ -1,0 +1,26 @@
+.contact{
+    background-color: black;
+    height: 85vh;
+}
+
+hr{
+    height: 2px;
+    background-image: -webkit-linear-gradient(left,black,white,white,black);
+}
+
+.contact button{
+    color: rgb(211,23,111);
+border: 1px solid rgb(211,23,111);
+background-color: transparent;
+}
+
+.contact button:hover{
+    color: white;
+    background-color: rgb(211,23,111);
+}
+
+@media screen and (min-width: 760px) {
+    .mx-md-auto{
+        width: 50%;
+    }
+}
