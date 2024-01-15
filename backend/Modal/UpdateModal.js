@@ -40,7 +40,7 @@
 
 const { DataTypes } = require('sequelize');
 const { v4: uuidv4 } = require('uuid');
-const sequelize = require('../Sequelize');  // Assuming you have a Sequelize instance
+const sequelize = require('./Sequelize');  // Assuming you have a Sequelize instance
 
 const Update = sequelize.define('Update', {
   id: {
