@@ -30,7 +30,7 @@
 
 const { DataTypes } = require('sequelize');
 const { v4: uuidv4 } = require('uuid');
-const sequelize = require('../Sequelize'); // Import your Sequelize instance
+const sequelize = require('./Sequelize'); // Import your Sequelize instance
 
 const Admin = sequelize.define('Admin', {
     id: {
