@@ -58,7 +58,7 @@ const About = () => {
                                         </tr>
                                     </tbody>
                                 </table>
-                                <a href='https://drive.google.com/file/d/1LP5p4TC8uYBW80YdsHcxfYn72bklxrXo/view?usp=drive_link'><button className='downloadbtn w-100'>Download Resume</button></a>
+                                <a href='https://drive.google.com/file/d/1gsx6Wel2QICMjxeERiSaI0hCG381ySuu/view?usp=sharing'><button className='downloadbtn w-100'>Download Resume</button></a>
 
                             </div>
                         </div>
