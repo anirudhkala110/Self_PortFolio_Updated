@@ -21,7 +21,7 @@ function App() {
   const [login, setLogin] = useState(false)
   useEffect(() => {
     axios.defaults.withCredentials = true
-    axios.get('http://localhost:8097/api/protectedRoute')
+    axios.get('https://portfolio.basic2ai.info/api/protectedRoute')
       .then(res => {
         setLogin(res.data.login)
       })

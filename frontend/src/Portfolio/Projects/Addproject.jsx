@@ -17,7 +17,7 @@ const Addproject = () => {
             alert("Enter all values. . .")
         }
         else {
-            axios.post(`http://localhost:8097/api/saveUpdate/${title}/${heading}/${desc}`, formData, { title: title, heading: heading, desc: desc, })
+            axios.post(`https://portfolio.basic2ai.info/api/saveUpdate/${title}/${heading}/${desc}`, formData, { title: title, heading: heading, desc: desc, })
                 .then(res => {
                     if (res.data.error === "Unauthorized") {
                         alert("You are not authorized for uploading data. . .")

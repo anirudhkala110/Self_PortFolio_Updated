@@ -19,7 +19,7 @@ const Project = () => {
     const [loading, setLoading] = useState(true);
     useEffect(() => {
         axios.defaults.withCredentials = true
-        axios.get('http://localhost:8097/api/getAllUpdates')
+        axios.get('https://portfolio.basic2ai.info/api/getAllUpdates')
             .then(res => {
                 setData(res.data.updates)
             })
@@ -33,7 +33,7 @@ const Project = () => {
     const [login, setLogin] = useState(false)
     useEffect(() => {
         axios.defaults.withCredentials = true
-        axios.get('http://localhost:8097/api/protectedRoute')
+        axios.get('https://portfolio.basic2ai.info/api/protectedRoute')
             .then(res => {
                 setLogin(res.data.login)
             })
@@ -51,7 +51,7 @@ const Project = () => {
     const handleDelete = (selectedResourceId) => {
         const confirm = window.confirm("Are you sure to delete this project? This is irreversible.")
         if (confirm) {
-            axios.delete(`http://localhost:8097/api/resources/${selectedResourceId}`)
+            axios.delete(`https://portfolio.basic2ai.info/api/resources/${selectedResourceId}`)
                 .then(res => {
                     setMsg(res.data.msg)
                     setMsg_type(res.data.msg_type)
@@ -82,7 +82,7 @@ const Project = () => {
                             data.map((data, i) => (
                                 <div className="col-sm-12 col-md-6 col-lg-4 p-3" key={i} >
                                     <div className="card text-dark p-3" >
-                                        <img src={`http://localhost:8097/File/${data.file}`} alt={`${data.file}, original image is not available due to network issue. . .`} className='w-100 rounded-3' style={{ border: "1px solid rgb(211,23,111)", boxShadow: "black 0px 0px 15px 1px", borderBottom: "3px solid rgb(211,23,111)", maxHeight: "170px" }} />
+                                        <img src={`https://portfolio.basic2ai.info/File/${data.file}`} alt={`${data.file}, original image is not available due to network issue. . .`} className='w-100 rounded-3' style={{ border: "1px solid rgb(211,23,111)", boxShadow: "black 0px 0px 15px 1px", borderBottom: "3px solid rgb(211,23,111)", maxHeight: "170px" }} />
                                         <div className='card-body'>
                                             <h4 className='card-title'>{data.title}</h4>
                                             <div style={{ whiteSpace: 'pre-line' }} className='mb-1'

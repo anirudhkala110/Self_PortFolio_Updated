@@ -15,7 +15,8 @@ const Details = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://localhost:8097/api/getupdate/${name}`);
+                const response = await axios.get(`https://portfolio.basic2ai.info/api/getupdate/${name}`);
+                console.log(response)
                 setData(response.data.updates);
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -30,11 +31,11 @@ const Details = () => {
     }, [name]);
 
     if (loading) {
-        return <p>Loading...</p>;
+        return <p className='text-white'>Loading...</p>;
     }
 
     if (!data) {
-        return <p>No data found</p>;
+        return <p className='text-white'>No data found</p>;
     }
     return (
         <div className="container bg-dark mt-5 w-100 d-flex justify-content-center pt-5 p-3 min-vh-100">
@@ -43,7 +44,7 @@ const Details = () => {
                     {data.title}
                 </h4>
                 <img
-                    src={`http://localhost:8097/File/${data.file}`}
+                    src={`https://portfolio.basic2ai.info/File/${data.file}`}
                     className="w-100 my-2 img-thumbnail rounded-3"
                     style={{
                         maxHeight: '550px',

@@ -14,7 +14,7 @@ const LoginRegister = () => {
     const [chk, setChk] = useState(false)
     useEffect(() => {
         axios.defaults.withCredentials = true
-        axios.get('http://localhost:8097/api/protectedRoute')
+        axios.get('https://portfolio.basic2ai.info/api/protectedRoute')
             .then(res => {
                 setChk(res.data.login)
             })
@@ -28,7 +28,7 @@ const LoginRegister = () => {
         else if (!chk) {
             if (login) {
                 // axios.post('https://api.legalbrother.in/api/login', { email: email, password: password })
-                axios.post('http://localhost:8097/api/login', { email: email, password: password })
+                axios.post('https://portfolio.basic2ai.info/api/login', { email: email, password: password })
                     .then((res) => {
                         if (res.data.login) {
                             setMsg(res.data.msg)
@@ -60,7 +60,7 @@ const LoginRegister = () => {
                     alert("Password didn't match. . . ")
                 }
                 else {
-                    axios.post('http://localhost:8097/api/register', { name: name, email: email, password: password, cpassword: cpassword })
+                    axios.post('https://portfolio.basic2ai.info/api/register', { name: name, email: email, password: password, cpassword: cpassword })
                         .then(res => {
                             setMsg(res.data.msg);
                             setMsg_type(res.data.msg_type);
