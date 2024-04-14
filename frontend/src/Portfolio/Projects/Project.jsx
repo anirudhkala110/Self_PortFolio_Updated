@@ -62,6 +62,12 @@ const Project = () => {
                 .catch(err => console.log(err))
         }
     }
+    const truncateText = (text, maxLength) => {
+        if (text.length <= maxLength) {
+            return text;
+        }
+        return text.substr(0, maxLength) + '...';
+    };
     return (
         <div className='w-100 min-vh-100'>
             <div className='projects w-100 mt-5 ' id='projects'>
@@ -84,9 +90,9 @@ const Project = () => {
                                     <div className="card text-dark p-3" >
                                         <img src={`https://portfolio.basic2ai.info/File/${data.file}`} alt={`${data.file}, original image is not available due to network issue. . .`} className='w-100 rounded-3' style={{ border: "1px solid rgb(211,23,111)", boxShadow: "black 0px 0px 15px 1px", borderBottom: "3px solid rgb(211,23,111)", maxHeight: "170px" }} />
                                         <div className='card-body'>
-                                            <h4 className='card-title'>{data.title}</h4>
+                                            <h4 className='card-title'>{truncateText(data.title, 32)}</h4>
                                             <div style={{ whiteSpace: 'pre-line' }} className='mb-1'
-                                            >{data.head}...
+                                            >{truncateText(data.head, 30)}
                                             </div>
                                             <button href='' className='btn btn-outline-dark m-1' onClick={e => handleRead(data.title)}>More Information</button>
                                             { login && <button href='' className='btn btn-outline-danger m-1' onClick={e => handleDelete(data.id)}>Delete</button> }
